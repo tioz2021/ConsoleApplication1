@@ -1,29 +1,16 @@
 #include <iostream>
-
-class Person {
-public:
-    // Constructor
-    Person(std::string name, int age) {
-        m_name = name;
-        m_age = age;
-    }
-
-    // Member function
-    void say_hello() {
-        std::cout << "Hello, my name is " << m_name << " and I am " << m_age << " years old." << std::endl;
-    }
-
-private:
-    std::string m_name;
-    int m_age;
-};
+#include <vector>
 
 int main() {
-    // Create an instance of the Person class
-    Person john("Jenya", 25);
+    std::vector<int> arr;
 
-    // Call the "say_hello" function on the Person object
-    john.say_hello();
+    for (int i = 1; i <= 5; i++) {
+        arr.push_back(i);
+    }
+
+    for (int i = 0; i < arr.size(); i++) {
+        std::cout << arr[i] << "\n";
+    }
 
     return 0;
 }
